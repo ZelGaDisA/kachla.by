@@ -13,10 +13,10 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
+        <Gallery />
         <About />
         <Services />
         <Items />
-        <Gallery />
       </main>
     </>
   );
