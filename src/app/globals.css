@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #090909;
+  --color-card-dark: #111111;
+  --color-gold: #c89b52;
+  --color-gold-light: #e2c189;
+  --color-text-light: #f4f1ea;
+  --color-text-muted: #a7a29a;
+  --color-border-gold: rgba(200, 155, 82, 0.2);
+  
+  --font-serif: 'Playfair Display', 'Georgia', serif;
+  --font-sans: 'Inter', 'Segoe UI', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold text-bg-dark px-6 py-3 font-medium transition-all duration-300 hover:bg-gold-light tracking-wide inline-flex items-center justify-center;
+  }
+  
+  .btn-outline {
+    @apply border border-gold text-gold px-6 py-3 font-medium transition-all duration-300 hover:bg-gold hover:text-bg-dark tracking-wide inline-flex items-center justify-center;
+  }
+  
+  .section-title {
+    @apply text-gold text-xs uppercase tracking-[0.2em] mb-3 flex items-center gap-2 justify-center md:justify-start;
+  }
+}
+
+/* Анимация бесконечной прокрутки */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 3 - 1.5rem * 3)); /* Ширина карточки * количество уникальных элементов + отступы */
+  }
+}
+
+/* Из-за адаптивности на больших экранах лучше завязать анимацию на проценты */
+@utility animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Красивое размытие краев у ленты слайдера */
+.mask-gradient {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* Стилизация скроллбара в модальном окне */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #090909;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c89b52;
+  border-radius: 3px;
+}
