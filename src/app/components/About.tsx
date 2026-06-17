@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <section id="about" className="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
       <div className="space-y-6">
-        <span className="section-title">О нас</span>
+        <span className="section-title text-sm tracking-[0.25em]">О нас</span>
         <h2 className="text-3xl md:text-4xl text-text-light leading-tight">
           Сохраняем прошлое. <br />Создаём наследие.
         </h2>
