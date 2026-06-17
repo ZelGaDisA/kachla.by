@@ -18,12 +18,33 @@ export default function Footer() {
         <div className="space-y-4">
           <h4 className="text-gold text-xs uppercase tracking-widest border-b border-gold/10 pb-2">Навигация</h4>
           <nav className="flex flex-col gap-2 text-xs uppercase tracking-widest text-text-muted">
-            <a href="#" className="hover:text-gold transition">О мастерской</a>
-            <a href="#" className="hover:text-gold transition">Наши услуги</a>
-            <a href="#" className="hover:text-gold transition">Исторические объекты</a>
-            <a href="#" className="hover:text-gold transition">Галерея работ</a>
+            <a 
+              href="#about" 
+              className="text-left hover:text-gold transition cursor-pointer"
+            >
+              О мастерской
+            </a>
+            <a 
+              href="#services" 
+              className="text-left hover:text-gold transition cursor-pointer"
+            >
+              Наши услуги
+            </a>
+            <a 
+              href="#objects" 
+              className="text-left hover:text-gold transition cursor-pointer"
+            >
+              Исторические объекты
+            </a>
+            <a 
+              href="#gallery" 
+              className="text-left hover:text-gold transition cursor-pointer"
+            >
+              Галерея работ
+            </a>
           </nav>
         </div>
+
 
         <div className="space-y-4">
           <h4 className="text-gold text-xs uppercase tracking-widest border-b border-gold/10 pb-2">Контакты</h4>
