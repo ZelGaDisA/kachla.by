@@ -6,19 +6,19 @@ const objectsData = [
     id: 1,
     title: "Усадьба Жиличи",
     region: "Могилевская область",
-    image: "/objects/zhilichi.jpg",
+    image: "/public/gallery/gr.k1.jpeg",
   },
   {
     id: 2,
     title: "Дворец Пусловских",
     region: "Брестская область",
-    image: "/objects/kossovo.jpg",
+    image: "/public/gallery/gr.k1.jpeg",
   },
   {
     id: 3,
     title: "Старый замок",
     region: "Гродненская область",
-    image: "/objects/grodno.jpg",
+    image: "/public/gallery/gr.k1.jpeg",
   },
 ];
 

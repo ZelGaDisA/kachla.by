@@ -17,24 +17,24 @@ const galleryData: WorkItem[] = [
     title: "Изразцовый камин в замке",
     shortDesc: "Классический стиль, ручная роспись",
     fullDesc: "Полный цикл воссоздания изразцового камина по чертежам XVIII века. Каждая деталь отливалась вручную из специальной шамотной глины. Процесс включал три этапа высокотемпературного обжига и нанесение уникальной глазури под золото.",
-    mainImage: "/gallery/work1.jpg",
-    processImages: ["/gallery/proc1-1.jpg", "/gallery/proc1-2.jpg"],
+    mainImage: "/gallery/gr.k1.jpeg",
+    processImages: ["/gallery/gr.k1.jpeg", "/gallery/gr11.png"],
   },
   {
     id: 2,
     title: "Реставрация дворцовой печи",
     shortDesc: "Восстановление элементов лепнины",
     fullDesc: "Кропотливая работа по очистке старинной печи от слоев краски, укрепление внутреннего каркаса и бережное восстановление утраченных фрагментов изразцовой керамики. Использовались только аутентичные материалы.",
-    mainImage: "/gallery/work2.jpg",
-    processImages: ["/gallery/proc2-1.jpg", "/gallery/proc2-2.jpg"],
+    mainImage: "/gallery/gr.z1.jpg",
+    processImages: ["/gallery/gr.z1.jpg", "/gallery/hero-side.jpeg"],
   },
   {
     id: 3,
     title: "Печь-голландка в резиденции",
     shortDesc: "Современная адаптация старинных чертежей",
     fullDesc: "Проектирование и монтаж классической голландской печи с адаптацией под современные стандарты дымоудаления. Облицовка выполнена глянцевыми белыми изразцами с кобальтовой росписью.",
-    mainImage: "/gallery/work3.jpg",
-    processImages: ["/gallery/proc3-1.jpg"],
+    mainImage: "/gallery/hero-side1.jpeg",
+    processImages: ["/gallery/st.z.gr.3.1.jpeg"],
   },
 ];
 
@@ -42,7 +42,6 @@ const galleryData: WorkItem[] = [
 export default function Gallery() {
   const [selectedWork, setSelectedWork] = useState<WorkItem | null>(null);
 
-  // Дублируем массив для создания эффекта бесконечной бесшовной ленты
   const duplicatedData = [...galleryData, ...galleryData, ...galleryData];
 
   return (
@@ -79,12 +78,10 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* МОДАЛЬНОЕ ОКНО (ПОП-АП) */}
       {selectedWork && (
         <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-[100] flex items-center justify-center p-4 overflow-y-auto">
           <div className="bg-bg-dark border border-border-gold max-w-4xl w-full p-6 md:p-8 relative max-h-[90vh] overflow-y-auto custom-scrollbar space-y-8">
             
-            {/* Кнопка закрытия */}
             <button
               onClick={() => setSelectedWork(null)}
               className="absolute top-4 right-4 text-text-muted hover:text-gold text-2xl transition"
@@ -92,18 +89,15 @@ export default function Gallery() {
               ✕
             </button>
 
-            {/* Заголовок */}
             <div>
               <h2 className="text-2xl md:text-4xl text-gold font-serif">{selectedWork.title}</h2>
               <p className="text-text-muted text-sm mt-1">{selectedWork.shortDesc}</p>
             </div>
 
-            {/* Основное описание */}
             <p className="text-text-light/90 text-sm md:text-base leading-relaxed font-light">
               {selectedWork.fullDesc}
             </p>
 
-            {/* Сетка с фотографиями процесса */}
             <div className="space-y-4">
               <h4 className="text-gold text-xs uppercase tracking-widest border-b border-gold/20 pb-2">
                 Процесс создания и готовый результат
