@@ -86,7 +86,7 @@ export default function Hero() {
 
               {/* Viber */}
               <a
-                href="viber://chat?number=%2B+375256453014" 
+                href="https://viber.click://chat?number=%2B375256453014" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full border border-border-gold bg-[#111111] text-text-light text-sm uppercase tracking-widest py-3 hover:bg-gold hover:text-bg-dark transition-all duration-300 font-medium"
