@@ -9,13 +9,17 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
+    "accept-language": "^3.0.20",
     "framer-motion": "^12.40.0",
+    "i18next": "^26.3.6",
+    "i18next-resources-to-backend": "^1.2.1",
     "lucide-react": "^1.18.0",
     "next": "15.5.19",
     "nodemailer": "^9.0.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.79.0",
+    "react-i18next": "^17.0.9",
     "yet-another-react-lightbox": "^3.32.0",
     "zod": "^4.4.3"
   },

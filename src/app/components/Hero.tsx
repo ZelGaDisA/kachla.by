@@ -14,17 +14,22 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 w-full relative z-20 grid md:grid-cols-2 gap-12 md:gap-24 items-center py-24">
         <div className="text-left space-y-6">
           <div className="text-gold text-xs uppercase tracking-[0.3em] flex items-center gap-2">
-            <span className="w-6 h-[1px] bg-gold" /> Традиции. Мастерство. Наследие
+            <span className="w-6 h-[1px] bg-gold" /> Возрождаем традиции.
+          </div>
+          <div className="text-gold text-xs uppercase tracking-[0.3em] flex items-center gap-2">
+            <span className="w-6 h-[1px] bg-gold" /> Совершенствуем Мастерство.
+          </div>
+          <div className="text-gold text-xs uppercase tracking-[0.3em] flex items-center gap-2">
+            <span className="w-6 h-[1px] bg-gold" /> Создаем Наследие.
           </div>
           
           <h1 className="text-4xl md:text-6xl text-text-light leading-[0.95] tracking-[-0.03em]">
-            Мастерская <br />
-            <span className="text-gold-light italic font-light">исторических печей</span> <br />
-            и изразцовой керамики
+            Исторические печи <br />
+            <span className="text-gold-light italic font-light">камины и архитектурная керамика</span> <br />
           </h1>
           
           <p className="text-text-muted text-sm md:text-base max-w-md font-light leading-relaxed">
-            Реставрация, изготовление и реконструкция исторических печей и каминов ручной работы по традиционным технологиям.
+            Профессиональная реставрация, реконструкция и изготовление по индивидуальным проектам.
           </p>
           
           <div className="flex flex-wrap gap-4 pt-4">
@@ -38,7 +43,7 @@ export default function Hero() {
           <div className="relative aspect-[2/3] w-full max-w-[480px] bg-[#111111] border border-border-gold overflow-hidden group shadow-2xl">
             <div 
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url('/hero-side.jpeg')" }} 
+              style={{ backgroundImage: "url('/hero-side.jpg')" }} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/60 via-transparent to-transparent" />
           </div>

@@ -45,7 +45,7 @@ export default function Gallery() {
   const duplicatedData = [...galleryData, ...galleryData, ...galleryData];
 
   return (
-    <section className="py-24 bg-card-dark/20 border-y border-border-gold overflow-hidden">
+    <section id="gallery" className="py-24 bg-card-dark/20 border-y border-border-gold overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
         <div>
           <span className="section-title">Галерея работ</span>
@@ -56,7 +56,6 @@ export default function Gallery() {
         </span>
       </div>
 
-      {/* Обертка для слайдера с бесконечной анимацией */}
       <div className="relative w-full flex items-center mask-gradient">
         <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused] whitespace-nowrap py-4 cursor-pointer">
           {duplicatedData.map((item, idx) => (
@@ -86,7 +85,6 @@ export default function Gallery() {
               onClick={() => setSelectedWork(null)}
               className="absolute top-4 right-4 text-text-muted hover:text-gold text-2xl transition"
             >
-              ✕
             </button>
 
             <div>
