@@ -3,33 +3,33 @@ import Image from "next/image";
 const services = [
   { 
     title: "Проектирование", 
-    desc: "Исторический анализ и разработка проекта",
+    desc: "Разрабатываем художественные проекты любой сложности - от израсцовых печей до фасадного декора и авторской керамики.",
     image: "service-1.jpg"
   },
   { 
     title: "Реставрация", 
-    desc: "Профессиональное восстановление исторических печей",
+    desc: "Реставрируем сохранившуюся архитектурную керамику на памятниках архитектуры.",
     image: "service-2.jpeg" 
   },
   { 
     title: "Изготовление", 
-    desc: "Печи и изразцы ручной работы по технологиям",
-    image: "service-3.jpeg"
+    desc: "Создаем архитектурную керамику по индивидуальным проектам высокой сложности.",
+    image: "service-3.jpg"
   },
   { 
     title: "Реконструкция", 
-    desc: "Воссоздание утраченных элементов и complexes",
+    desc: "Полное или частичное воссоздание утраченной архитектурной керамики: изразцовых печей, каминов и элементов фасада",
     image: "service-4.jpg"
   },
 ];
 
 export default function Services() {
   return (
-    <section className="py-24 bg-card-dark/40 border-y border-border-gold">
+    <section id="services" className="py-24 bg-card-dark/40 border-y border-border-gold">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center md:text-left mb-16">
-          <span className="section-title">Наши услуги</span>
-          <h2 className="text-3xl md:text-4xl text-text-light mt-2">Чем мы занимаемся</h2>
+          {/* <span className="section-title">Наши услуги</span> */}
+          <h2 className="text-3xl md:text-4xl text-text-light mt-2">Наши услуги</h2>
         </div>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

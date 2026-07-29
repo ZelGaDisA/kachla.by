@@ -34,7 +34,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-8 max-w-xl mx-auto px-6 text-center">
+    <section id="contacts" className="py-8 max-w-xl mx-auto px-6 text-center">
       <div className="mb-12">
         <span className="section-title justify-center">Обратная связь</span>
         <h2 className="text-3xl md:text-4xl text-text-light mt-2 font-serif">Заказать звонок</h2>
@@ -56,7 +56,6 @@ export default function ContactForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6 text-left">
-          {/* Поле имени */}
           <div className="space-y-2">
             <label className="text-gold text-[11px] uppercase tracking-widest block font-light">Ваше имя</label>
             <input

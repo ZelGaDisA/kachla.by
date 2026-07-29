@@ -60,7 +60,7 @@ export default function Footer() {
         <div className="space-y-4">
           <h4 className="text-gold text-xs uppercase tracking-widest border-b border-gold/10 pb-2">Режим работы</h4>
           <div className="space-y-1 text-xs text-text-muted font-light leading-relaxed">
-            <p>Пн — Пт: 09:00 — 18:00</p>
+            <p>Пн — Пт: 09:00 — 17:00</p>
             <p>Сб — Вс: Выходной</p>
             <p className="text-gold/60 pt-2 text-[11px]">Прием заявок на сайте — круглосуточно</p>
           </div>

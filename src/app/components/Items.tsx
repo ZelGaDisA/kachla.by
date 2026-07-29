@@ -1,27 +1,24 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image"; // 1. Импортируем компонент Image
+import Image from "next/image"; 
 
 const objectsData = [
   {
     id: 1,
-    title: "Усадьба Жиличи",
+    title: "Дворцово-парковый ансамбль в Жиличах",
     region: "Могилевская область",
-    // Прямая качественная ссылка на дворец в Жиличах
     image: "/objects/zhilichi.jpg",
   },
   {
     id: 2,
-    title: "Дворец Пусловских",
+    title: "Коссовский дворцово-парковый комплекс",
     region: "Брестская область",
-    // Прямая ссылка на Коссовский замок
     image: "/objects/kossovo.jpg",
   },
   {
     id: 3,
     title: "Старый замок",
-    region: "Гродненская область",
-    // Прямая ссылка на замок/крепость
+    region: "Гродно",
     image: "/objects/grodno.jpg",
   },
 ];
@@ -32,11 +29,11 @@ export default function Items() {
   return (
     <section className="py-24 max-w-7xl mx-auto px-6">
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        {/* Левая часть: Список объектов */}
         <div className="space-y-8">
           <div>
-            <span className="section-title text-sm tracking-[0.25em]">Исторические объекты</span>
-            <h2 className="text-3xl md:text-4xl text-text-light mt-2 font-serif">Наше наследие</h2>
+            <span className="section-title text-4xl tracking-[0.25em]">Историческое наследие</span>
+            <h2 className="text-3xl md:text-2xl text-text-light mt-2 font-serif">Наша гордость и вклад в сохранение архитектурных памятников</h2>
+            <p className="text-3xl md:text-xl text-text-light mt-2 font-serif">Мы возвращаем исторический облик объектам культурного наследия</p>
           </div>
 
           <div className="divide-y divide-border-gold">
@@ -62,16 +59,14 @@ export default function Items() {
           </div>
         </div>
 
-        {/* Правая часть: Контейнер для отображения фотографии */}
         <div className="relative aspect-[4/3] w-full bg-card-dark border border-border-gold overflow-hidden shadow-2xl">
           <Image
             src={objectsData[activeIdx].image}
             alt={objectsData[activeIdx].title}
             fill
-            unoptimized // 2. Защита от ошибки статического экспорта
+            unoptimized
             className="object-cover transition-all duration-700 animate-fade-in"
           />
-          {/* Элегантное затемнение снизу для интеграции в темный интерфейс */}
           <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/40 to-transparent pointer-events-none" />
         </div>
       </div>
